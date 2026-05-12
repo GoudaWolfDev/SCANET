@@ -3,7 +3,7 @@
 
 Developed by **Gouda Nasrallah (جوده نصرالله)**.
 
-![SCANET Interface](file:///c:/Users/Gouda/Desktop/scanet/img.PNG)
+![SCANET Interface](img.PNG)
 
 ---
 
@@ -85,7 +85,7 @@ sudo python scanet.py 192.168.1.0/24 -v
 This project is licensed under the **Custom MIT License**. 
 - The name **SCANET** and its branding are protected.
 - Unauthorized redistribution under different branding is prohibited.
-- See the [LICENSE](file:///c:/Users/Gouda/Desktop/scanet/LICENSE) file for full details.
+- See the [LICENSE](LICENSE) file for full details.
 
 ## 👨‍💻 Developer
 **Gouda Nasrallah (جوده نصرالله)**
