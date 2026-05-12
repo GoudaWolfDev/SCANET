@@ -10,87 +10,148 @@ Developed by **Gouda Nasrallah (جوده نصرالله)**.
 ## 🇺🇸 English Version
 
 ### 🎯 Overview
-**SCANET Pro** is a state-of-the-art reconnaissance engine engineered for high-speed network discovery and intelligence gathering. Optimized for **Kali Linux**, it provides a precision-oriented approach to identifying live assets, services, and vulnerabilities in complex environments.
+**SCANET Pro** is a modern, elegant, and powerful network reconnaissance tool designed for security professionals and researchers. It combines speed, accuracy, and beautiful output to help you discover live hosts, services, and vulnerabilities efficiently.
 
 ### ✨ Key Features
-- **Elite Discovery**: Hybrid ARP (Netdiscover) and ICMP (Ping Sweep) engine for maximum coverage.
-- **Turbo Recon (`-f`)**: Rapidly interrogates the top 100 ports for quick tactical assessment.
-- **Deep Intelligence (`-v`)**: Leverages Nmap Scripting Engine (NSE) for deep-dive vulnerability analysis.
-- **Automated Intelligence**: Results are strictly ordered and structured for professional reporting.
-- **Infinite Loop Mode**: Stay in the recon flow without restarting the application.
-- **JSON Archiving**: Every operation is logged into a structured JSON report for post-op analysis.
+- Hybrid Discovery Engine (Netdiscover + Nmap Ping Sweep)
+- Fast Scan Mode (`-f`) – Top 100 ports
+- Deep Vulnerability Scanning (`-v`) using Nmap NSE
+- Infinite Loop Mode for continuous scanning
+- Professional formatted output with Rich library
+- Automatic structured JSON reporting
 
-### 🚀 Quick Start
+---
+
+### 🛠️ Installation (Recommended Way)
+
 ```bash
-# Clone the intelligence suite
+# 1. Clone the repository
 git clone https://github.com/GoudaWolfDev/SCANET.git
 cd SCANET
 
-# Deploy dependencies
+# 2. Install system requirements
+sudo apt update
+sudo apt install nmap netdiscover -y
+
+# 3. Create Python Virtual Environment (Strongly Recommended)
+python3 -m venv venv
+
+# 4. Activate the virtual environment
+source venv/bin/activate
+
+# 5. Install Python dependencies
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 🛠️ Strategic Usage
+**💡 Why use a Virtual Environment?**
+- Prevents library conflicts with other Kali tools.
+- Resolves `externally-managed-environment` issues.
+- Makes installation safer and cleaner.
+
+---
+
+### 🚀 How to Use
+
 ```bash
-# Standard Tactical Scan
-sudo python scanet.py 192.168.1.0/24
+# Activate environment first (every new terminal)
+source venv/bin/activate
 
-# Fast Infiltration
-sudo python scanet.py 192.168.1.0/24 -f
+# Show help
+python scanet.py -h
 
-# Vulnerability Assessment
-sudo python scanet.py 192.168.1.0/24 -v
+# Basic Network Scan
+sudo python scanet.py -t 192.168.1.0/24
+
+# Fast Scan
+sudo python scanet.py -t 192.168.1.0/24 -f
+
+# Full Scan + Vulnerability Detection
+sudo python scanet.py -t 192.168.1.0/24 -v
+
+# Infinite Loop Mode
+sudo python scanet.py -t 192.168.1.0/24 -m loop
 ```
+
+> **Note**: `sudo` is required because Netdiscover and some Nmap features need root privileges.
 
 ---
 
 ## 🇸🇦 النسخة العربية
 
 ### 🎯 نظرة عامة
-**SCANET Pro** هو محرك استخباراتي متطور لفحص الشبكات وجمع المعلومات، تم تطويره خصيصاً للعمليات الأمنية المتقدمة. الأداة محسنة بالكامل لنظام **Kali Linux**، وتوفر دقة متناهية في اكتشاف الأجهزة النشطة، الخدمات، والثغرات الأمنية في البيئات المعقدة.
+**SCANET Pro** أداة متطورة وأنيقة لجمع المعلومات الاستخباراتية وفحص الشبكات. تجمع بين السرعة والدقة والواجهة الجميلة، وهي مثالية للباحثين والمتخصصين في الأمن السيبراني.
 
 ### ✨ المميزات الرئيسية
-- **اكتشاف النخبة:** محرك هجين (ARP & ICMP) لضمان تغطية كاملة لجميع الأجهزة المتصلة.
-- **الاستطلاع السريع (`-f`):** فحص تكتيكي لأهم 100 منفذ في ثوانٍ معدودة.
-- **الذكاء العميق (`-v`):** دمج كامل لسكربتات Nmap (NSE) لاكتشاف الثغرات الأمنية الحرجة.
-- **تنظيم تلقائي:** ترتيب البيانات بشكل هيكلي واحترافي لتسهيل عملية التحليل.
-- **وضع العمل المستمر:** الحفاظ على تدفق العمليات دون الحاجة لإعادة تشغيل الأداة.
-- **أرشفة ذكية:** حفظ جميع النتائج في ملفات JSON منظمة لاستخدامها في التقارير اللاحقة.
+- محرك اكتشاف هجين (Netdiscover + Nmap)
+- وضع المسح السريع (`-f`)
+- فحص الثغرات العميق (`-v`)
+- وضع اللوب المستمر (Infinite Loop)
+- واجهة مستخدم احترافية باستخدام Rich
+- تصدير التقارير تلقائياً بصيغة JSON
 
-### 🚀 البدء السريع
+---
+
+### 🛠️ طريقة التثبيت (الطريقة الموصى بها)
+
 ```bash
-# تحميل المشروع
+# 1. استنساخ المشروع
 git clone https://github.com/GoudaWolfDev/SCANET.git
 cd SCANET
 
-# تثبيت المتطلبات
+# 2. تثبيت الأدوات النظامية
+sudo apt update
+sudo apt install nmap netdiscover -y
+
+# 3. إنشاء بيئة Python افتراضية (موصى به بشدة)
+python3 -m venv venv
+
+# 4. تفعيل البيئة
+source venv/bin/activate
+
+# 5. تثبيت المكتبات
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 🛠️ أمثلة للاستخدام
+**💡 لماذا نستخدم Virtual Environment؟**
+- يمنع تعارض المكتبات مع باقي أدوات Kali.
+- يحل مشكلة `externally-managed-environment`.
+- يجعل التثبيت أكثر أماناً ونظافة.
+
+---
+
+### 🚀 أمثلة الاستخدام
+
 ```bash
-# فحص تكتيكي شامل
-sudo python scanet.py 192.168.1.0/24
+# تفعيل البيئة أولاً
+source venv/bin/activate
 
-# استطلاع سريع وخفيف
-sudo python scanet.py 192.168.1.0/24 -f
+# فحص الشبكة
+sudo python scanet.py -t 192.168.1.0/24
 
-# فحص الثغرات الأمنية العميق
-sudo python scanet.py 192.168.1.0/24 -v
+# فحص سريع
+sudo python scanet.py -t 192.168.1.0/24 -f
+
+# فحص مع كشف الثغرات
+sudo python scanet.py -t 192.168.1.0/24 -v
+
+# وضع المسح المستمر
+sudo python scanet.py -t 192.168.1.0/24 -m loop
 ```
 
 ---
 
 ## ⚖️ License
-This project is licensed under the **Custom MIT License**. 
-- The name **SCANET** and its branding are protected.
-- Unauthorized redistribution under different branding is prohibited.
-- See the [LICENSE](LICENSE) file for full details.
+This project is licensed under a **Custom MIT License**.  
+- اسم **SCANET** وتصميمه محمي.  
+- ممنوع إعادة توزيع الأداة باسم أو شعار مختلف.  
+راجع ملف [LICENSE](LICENSE) للتفاصيل.
 
 ## 👨‍💻 Developer
 **Gouda Nasrallah (جوده نصرالله)**
-*Elite Intelligence Gathering Systems*
 
 ---
+
 > [!IMPORTANT]
-> **Legal Notice**: This tool is designed for educational and authorized security testing only. The author is not responsible for any misuse or illegal activities conducted with this framework.
+> **تنبيه هام**: هذه الأداة مصممة للأغراض التعليمية والاختبات الأمنية المصرح بها فقط. المطور غير مسؤول عن أي استخدام غير قانوني.
