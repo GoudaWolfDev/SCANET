@@ -1,3 +1,0 @@
-python-nmap
-mac-vendor-lookup
-rich
